@@ -15,10 +15,7 @@ const (
 	firstSecondBoth                 = 4
 )
 
-var nthPersonTable = map[string]personType{
-	"ぼくら": firstSecondBoth,
-	"僕ら":  firstSecondBoth,
-}
+var nthPersonTable = map[string]personType{}
 
 var firstPerson = []string{
 	"僕", "ぼく", "ボク",
@@ -40,6 +37,10 @@ var secondPerson = []string{
 	"お前", "おまえ",
 }
 
+var firstAndSecondPerson = []string{
+	"僕ら", "ぼくら",
+}
+
 var kouOtsu = map[personType]string{
 	firstPersonSingular:  "甲",
 	secondPersonSingular: "乙",
@@ -57,6 +58,9 @@ func init() {
 	}
 	for _, s := range secondPerson {
 		nthPersonTable[normalize(s)] = secondPersonSingular
+	}
+	for _, s := range firstAndSecondPerson {
+		nthPersonTable[normalize(s)] = firstSecondBoth
 	}
 }
 
