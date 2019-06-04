@@ -25,6 +25,10 @@ func TestExampleSuccess(t *testing.T) {
 			Input:    "いつだって僕らは",
 			Expected: "いつだって甲乙双方は",
 		},
+		{
+			Input:    "彼は",
+			Expected: "丙は",
+		},
 	}
 	for _, tc := range tt {
 		actual := Translate(tc.Input)

@@ -37,6 +37,11 @@ var secondPerson = []string{
 	"お前", "おまえ",
 }
 
+var thirdPerson = []string{
+	"彼", "カレ",
+	"彼女", "カノジョ",
+}
+
 var firstAndSecondPerson = []string{
 	"僕ら", "ぼくら",
 }
@@ -58,6 +63,9 @@ func init() {
 	}
 	for _, s := range secondPerson {
 		nthPersonTable[normalize(s)] = secondPersonSingular
+	}
+	for _, s := range thirdPerson {
+		nthPersonTable[normalize(s)] = thirdPersonSingular
 	}
 	for _, s := range firstAndSecondPerson {
 		nthPersonTable[normalize(s)] = firstSecondBoth
