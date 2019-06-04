@@ -44,6 +44,8 @@ var thirdPerson = []string{
 
 var firstAndSecondPerson = []string{
 	"僕ら", "ぼくら",
+	"僕達", "僕たち",
+	"私達", "わたしたち",
 }
 
 var kouOtsu = map[personType]string{
